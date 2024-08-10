@@ -1,12 +1,12 @@
 import React from 'react';
 import '../assets/styles/main.scss';
 
-const Projects = () => {
+const NavButton = () => {
   return (
-    <div className='Projects'>
+    <div className='NavButton'>
       Projects
     </div>
   );
 };
 
-export default Projects;
+export default NavButton;

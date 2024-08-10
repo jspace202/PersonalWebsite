@@ -1,12 +1,14 @@
 import React from 'react';
 import '../assets/styles/main.scss'
 
-const ExampleComponent = () => {
+const Footer = () => {
   return (
     <div className='Footer'>
-      Footer
+      <div className='ask'>
+        Footer
+      </div>
     </div>
   );
 };
 
-export default ExampleComponent;
+export default Footer;

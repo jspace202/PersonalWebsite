@@ -1,9 +1,83 @@
-.Header {
-    color: rebeccapurple;
-    background-color: olivedrab;
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    width: 100%;  
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    position: fixed;
+    border: 1px solid #bebebe; 
+}
+
+.About {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    background-color: #ffcfcf;
+    margin: 10px;
+    margin-top: 80px;
+    border: 2px solid #000000; 
+    padding: 10px 10px;
+}
+
+.Education {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    background-color: #7a567e;
+    margin: 10px;
+    border: 2px solid #000000; 
+    padding: 10px 10px;
+}
+
+.Experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    background-color: #3e358f;
+    margin: 10px;
+    border: 2px solid #000000; 
+    padding: 10px 10px;
+}
+
+.Projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    background-color: #ffd297;
+    margin: 10px;
+    border: 2px solid #000000; 
+    padding: 10px 10px;
 }
 
 .Footer {
-    color: saddlebrown;
-    background-color: deeppink;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background-color: #080808;
+    height: 100px;
+    padding: 20px;
+}
+
+.ask {
+    background-color: rgb(37, 37, 24);
+}
+
+.NavButton {
+    background-color: rgb(238, 238, 238);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10%;
+    border: 1px solid #000000; /* 2px wide, solid line, black color */
+    padding: 10px 20px;
+    border-radius: 10px;
 }
