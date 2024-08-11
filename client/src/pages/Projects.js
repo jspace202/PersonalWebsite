@@ -1,9 +1,9 @@
 import React from 'react'
 import '../assets/styles/Projects.scss'
 
-const ProjectsPage = () => {
+const Projects = () => {
   return (
-    <div className='ProjectsPage'>
+    <div className='Projects'>
       <h1>Projects</h1>
       <div className='Gallery'>
         <h2>AI Chatbot</h2>
@@ -15,4 +15,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage;
+export default Projects;

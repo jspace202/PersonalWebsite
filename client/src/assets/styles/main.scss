@@ -1,6 +1,6 @@
 .Navbar {
     display: flex;
-    justify-content: space-between;
+    //justify-content: s;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     width: 100%;  
@@ -15,10 +15,8 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 200px;
-    background-color: #ffcfcf;
-    margin: 10px;
-    margin-top: 80px;
+    height: 400px;
+    background-color: #ffffff;
     border: 2px solid #000000; 
     padding: 10px 10px;
 }
@@ -28,9 +26,8 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 200px;
-    background-color: #7a567e;
-    margin: 10px;
+    height: 400px;
+    background-color: #ffffff;
     border: 2px solid #000000; 
     padding: 10px 10px;
 }
@@ -40,9 +37,8 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 200px;
-    background-color: #3e358f;
-    margin: 10px;
+    height: 400px;
+    background-color: #ffffff;
     border: 2px solid #000000; 
     padding: 10px 10px;
 }
@@ -52,9 +48,8 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 200px;
-    background-color: #ffd297;
-    margin: 10px;
+    height: 400px;
+    background-color: #ffffff;
     border: 2px solid #000000; 
     padding: 10px 10px;
 }
@@ -73,11 +68,26 @@
 }
 
 .NavButton {
-    background-color: rgb(238, 238, 238);
-    margin: 10px;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
-    border-radius: 10%;
-    border: 1px solid #000000; /* 2px wide, solid line, black color */
-    padding: 10px 20px;
-    border-radius: 10px;
+    //transition: transform 0.3s ease, letter-spacing 0.3s ease, text-shadow 0.3s ease;
+}
+
+.NavButton:hover {
+    background-color: rgb(236, 236, 236);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.NavIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HUDIcon {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
 }

@@ -1,12 +1,14 @@
 import React from 'react';
 import '../assets/styles/main.scss'
-import NavButton from './NavButton';
+import NavButton from './NavBar/NavButton';
+import NavIcon from './NavBar/NavIcon';
 
-const Navbar = () => {
+function Navbar () {
   return (
     <div className='Navbar'>
-      <NavButton />
-      <NavButton />
+      <NavIcon />
+      <NavButton text='Home'/>
+      <NavButton text='Projects'/>
     </div>
   );
 };

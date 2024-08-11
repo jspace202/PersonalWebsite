@@ -1,10 +1,10 @@
 import React from 'react';
-import '../assets/styles/main.scss';
+import '../../assets/styles/main.scss';
 
-const NavButton = () => {
+function NavButton({text}) {
   return (
     <div className='NavButton'>
-      Projects
+      {text}
     </div>
   );
 };
