@@ -7,8 +7,8 @@ function Navbar () {
   return (
     <div className='Navbar'>
       <NavIcon />
-      <NavButton text='Home'/>
-      <NavButton text='Projects'/>
+      <NavButton text='Home' route="/" />
+      <NavButton text='Projects' route="/projects" />
     </div>
   );
 };

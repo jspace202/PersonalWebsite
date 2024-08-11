@@ -1,22 +1,17 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Projects from '../components/Projects';
 import '../assets/styles/main.scss'
 
-const Projects = () => {
+const ProjectsPage = () => {
   return (
-    <div className='Project'>
+    <div className='ProjectsPage'>
       <Navbar />
-      <div className='Gallery'>
-        <h1>Projects</h1>
-        <h2>AI Chatbot</h2>
-        <h2>Real Estate API</h2>
-        <h2>Map API</h2>
-        <h2>HUD</h2>
-      </div>
+      <Projects />
       <Footer />
     </div>
   );
 };
 
-export default Projects;
+export default ProjectsPage;
