@@ -8,6 +8,28 @@
     font-size: medium;
     position: fixed;
     border: 1px solid #bebebe; 
+    z-index: 1000;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/aboutwallpaper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2; /* Adjust opacity as needed */
+    z-index: 1; /* Layer it below the content */
 }
 
 .About {
@@ -16,9 +38,7 @@
     justify-content: center;
     text-align: center;
     height: 400px;
-    background-color: #ffffff;
-    border: 2px solid #000000; 
-    padding: 10px 10px;
+    z-index: 2;
 }
 
 .Education {
@@ -28,7 +48,6 @@
     text-align: center;
     height: 400px;
     background-color: #ffffff;
-    border: 2px solid #000000; 
     padding: 10px 10px;
 }
 
@@ -39,7 +58,6 @@
     text-align: center;
     height: 400px;
     background-color: #ffffff;
-    border: 2px solid #000000; 
     padding: 10px 10px;
 }
 
@@ -50,17 +68,22 @@
     text-align: center;
     height: 400px;
     background-color: #ffffff;
-    border: 2px solid #000000; 
-    padding: 10px 10px;
+    padding: 0px 0px;
+}
+
+.MainSection {
+    margin-top: 50px;
 }
 
 .Footer {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     color: rgb(255, 255, 255);
-    background-color: #080808;
+    background-color: #f0f0f0;
     height: 100px;
-    padding: 20px;
+    padding: 5px;
 }
 
 .ask {
@@ -105,8 +128,6 @@
     background-color: rgb(255, 255, 255);
     height: 100%;
     width: 100%;
-    padding: 20px;
-    overflow: hidden;
 }
 
 .Item {
@@ -144,4 +165,29 @@
     padding: 8px;;
     display: flex;
     flex-direction: column;
+}
+
+.FooterIcon {
+    width: 30px;
+    height: 30px;
+}
+
+.Footer text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-small;
+    color: black;
+    margin: 5px;
+}
+
+.IconButton {
+    margin: 5px;
+}
+
+.Icon {
+    color: black;
+}
+
+.SocialIcons {
+    display: flex;
+    flex-direction: row;
 }
