@@ -3,8 +3,10 @@ import '../../assets/styles/main.scss';
 
 const About = () => {
   return (
-    <div className='About'>
-      About
+    <div className='banner'>
+      <div className='About'>
+        About
+      </div>
     </div>
   );
 };
