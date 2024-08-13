@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'GreyQo';
+    src: url('../fonts/GreyQo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .AboutBanner {
     position: relative;
     width: 100%;
@@ -24,6 +31,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 350px;
     z-index: 2;
+}
+
+.AboutHUDIcon {
+    width: 50px;
+    height: auto;
+    margin: 10px;
+}
+
+.title {
+    font-family: 'GreyQo';
+    font-size: 3rem;
+    font-weight: Sbolder;
+    text-shadow: 1px 1px rgb(212, 212, 212);
+    margin: 0px;
 }

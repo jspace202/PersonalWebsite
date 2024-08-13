@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'GreyQo';
+    src: url('../fonts/GreyQo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .ExperienceBanner {
     position: relative;
     width: 100%;
@@ -24,7 +31,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 100%;
     z-index: 2;
     padding: 10px;
 }
@@ -35,9 +42,9 @@
 }
 
 .Experience h1 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'GreyQo';
     text-shadow: 1px 1px rgb(212, 212, 212);
-    font-size: x-large;
+    font-size: 2rem;
 }
 
 .Section {
@@ -56,7 +63,7 @@
     align-items: start;
     padding-left: 30px;
     justify-content: center;
-    width: 60%;
+    width: 65%;
     height: 100%;
     overflow: hidden;
 }
@@ -66,7 +73,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    width: 40%;
+    width: 35%;
     height: 100%;
     padding-right: 30px;
     border-right: 2px solid #cacaca; /* 2px wide, solid line, black color */
