@@ -1,7 +1,7 @@
 import React from 'react';
 import { faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import IconButton from './IconButton';
-import '../../assets/styles/main.scss'
+import '../../assets/styles/main.scss';
 
 const SocialIcons = () => {
   return (

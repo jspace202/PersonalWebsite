@@ -1,11 +1,12 @@
 import React from 'react';
-import '../../assets/styles/main.scss';
+import '../../assets/styles/About.scss';
+import SocialIcons from '../Socials/SocialIcons';
 
 const About = () => {
   return (
-    <div className='banner'>
+    <div className='AboutBanner'>
       <div className='About'>
-        About
+        <SocialIcons />
       </div>
     </div>
   );

@@ -1,0 +1,126 @@
+.EducationBanner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.EducationBanner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/educwallpaper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.03; 
+    z-index: 1;  
+}
+
+.Education {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    z-index: 2;
+    padding: 10px;
+}
+
+.Education img {
+    height: 40px;
+    width: auto;
+}
+
+.Education h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px rgb(212, 212, 212);
+    font-size: x-large;
+}
+
+.Section {
+    height: 120px;
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.School {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 30px;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.Degree {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+    height: 100%;
+    padding-left: 30px;
+    border-left: 2px solid #cacaca; /* 2px wide, solid line, black color */
+    overflow: hidden;
+}
+
+.School img {
+    width: 30px;
+    height: auto;
+}
+
+.school {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: rgb(0, 0, 0);
+    margin: 3px;
+}
+
+.city {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    color: rgb(99, 99, 99);
+    margin-bottom: 2px;
+}
+
+.date {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-small ;
+    color: rgb(99, 99, 99);
+}
+
+.degree {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    margin: 3px;
+}
+
+.major {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    color: rgb(0, 0, 0);
+    margin-bottom: 2px;
+}
+
+.GPA {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: smaller;
+    color: rgb(99, 99, 99);
+    margin-bottom: 2px;
+}
+
+.awards {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-small;
+    color: rgb(99, 99, 99);
+    margin-bottom: 2px;
+}

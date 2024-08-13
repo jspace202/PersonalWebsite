@@ -1,10 +1,12 @@
 import React from 'react';
-import '../../assets/styles/main.scss';
+import '../../assets/styles/Experience.scss';
 
 const Experience = () => {
   return (
-    <div className='Experience'>
-      Experience
+    <div className='ExperienceBanner'>
+      <div className='Experience'>
+        Experience
+      </div>
     </div>
   );
 };

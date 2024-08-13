@@ -11,56 +11,6 @@
     z-index: 1000;
 }
 
-.banner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../images/aboutwallpaper.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.2; /* Adjust opacity as needed */
-    z-index: 1; /* Layer it below the content */
-}
-
-.About {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 400px;
-    z-index: 2;
-}
-
-.Education {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 400px;
-    background-color: #ffffff;
-    padding: 10px 10px;
-}
-
-.Experience {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 400px;
-    background-color: #ffffff;
-    padding: 10px 10px;
-}
-
 .Projects {
     display: flex;
     flex-direction: column;
@@ -190,4 +140,5 @@
 .SocialIcons {
     display: flex;
     flex-direction: row;
+    z-index: 3;
 }
