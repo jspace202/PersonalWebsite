@@ -15,7 +15,13 @@ const Education = () => {
           end_date={`December 2023`}
           degree={`Bachelor of Science`}
           major={`Computer Engineering`}
-          awards={`5× President's Honor Roll & 2× Dean's Honor Roll`}
+          awards={
+            <span>
+              5× President's Honor Roll
+              <br/>2× Dean's Honor Roll
+              <br/>Regent's Distinguished Scholar
+            </span>
+            }
           GPA={`3.9`}
         />
         <Section 
