@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import HUD from '../components/HUD/HUD';
+import Navbar from '../components/NavBar/Navbar';
+import Footer from '../components/Footer/Footer';
+import HUD from '../components/Projects/HUD';
 
 const HUDPage = () => {
   return (

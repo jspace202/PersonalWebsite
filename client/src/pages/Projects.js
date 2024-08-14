@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Projects from '../components/Projects';
+import Navbar from '../components/NavBar/Navbar';
+import Footer from '../components/Footer/Footer';
+import Projects from '../components/Projects/Projects';
 import '../assets/styles/main.scss'
 
 const ProjectsPage = () => {

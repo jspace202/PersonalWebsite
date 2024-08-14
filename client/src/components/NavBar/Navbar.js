@@ -1,7 +1,7 @@
 import React from 'react';
-import '../assets/styles/main.scss'
-import NavButton from './NavBar/NavButton';
-import NavIcon from './NavBar/NavIcon';
+import '../../assets/styles/main.scss'
+import NavButton from './NavButton';
+import NavIcon from './NavIcon';
 
 function Navbar () {
   return (

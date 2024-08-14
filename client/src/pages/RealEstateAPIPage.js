@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import RealEstateAPI from '../components/RealEstateAPI/RealEstateAPI';
+import Navbar from '../components/NavBar/Navbar';
+import Footer from '../components/Footer/Footer';
+import RealEstateAPI from '../components/Projects/RealEstateAPI';
 
 const RealEstateAPIPage = () => {
   return (
