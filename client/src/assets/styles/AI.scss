@@ -1,0 +1,31 @@
+.AIPage {
+    display: flex;
+    flex-direction: column;
+}
+
+.AIBanner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.AIBanner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../../public/neuralnet.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.06; /* Adjust opacity as needed */
+    z-index: 1; /* Layer it below the content */
+}
+
+.AI {
+    height: 770px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}

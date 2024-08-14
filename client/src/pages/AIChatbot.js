@@ -1,9 +1,14 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import AI from '../components/AIChatbot/AIChatbot';
 
 const AIChatbot = () => {
   return (
     <div className='AIChatbot'>
-      AI Chatbot
+      <Navbar/>
+      <AI/>
+      <Footer />
     </div>
   );
 };

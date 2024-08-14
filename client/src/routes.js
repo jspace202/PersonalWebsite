@@ -2,9 +2,9 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import NotFound from './pages/NotFound';
 import AIChatbot from './pages/AIChatbot';
-import RealEstateAPI from './pages/RealEstateAPI';
-import HUD from './pages/HUD';
-import MapAPI from './pages/MapAPI';
+import RealEstateAPIPage from './pages/RealEstateAPIPage';
+import HUDPage from './pages/HUDPage';
+import MapAPIPage from './pages/MapAPIPage';
 // Import other pagess as needed
 
 const routes = [
@@ -12,9 +12,9 @@ const routes = [
   { path: '/projects', element: <Projects /> },
   { path: '*', element: <NotFound /> },
   { path: '/aichatbot', element: <AIChatbot />},
-  { path: '/realestateapi', element: <RealEstateAPI />},
-  { path: '/mapapi', element: <MapAPI />},
-  { path: '/hud', element: <HUD />},
+  { path: '/realestateapi', element: <RealEstateAPIPage />},
+  { path: '/mapapi', element: <MapAPIPage />},
+  { path: '/hud', element: <HUDPage />},
   // Add more routes here as needed
 ];
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/main.scss'
+import '../../assets/styles/Projects.scss'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -13,14 +13,15 @@ function Item ({route, image, title, text}) {
   return (
     <div className='Item' onClick={handleClick}>
       <div className='ItemPic'>
-        <img src={`${process.env.PUBLIC_URL}/${image}`} alt="Project Image"/>
+        <img src={`${process.env.PUBLIC_URL}/${image}`} alt={title}/>
       </div>
       <div className='description'>
-        <text>{title}</text>
-        <text>{text}</text>
+        <text className='itemTitle'>{title}</text>
+        <text className='itemDescription'>{text}</text>
       </div>
     </div>
   );
 };
 
 export default Item;
+

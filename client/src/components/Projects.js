@@ -1,6 +1,6 @@
 import React from 'react';
 import Gallery from './Projects/Gallery';
-import '../assets/styles/main.scss';
+import '../assets/styles/Projects.scss';
 
 const Projects = () => {
   return (

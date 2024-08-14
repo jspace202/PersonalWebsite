@@ -44,11 +44,11 @@
 .Experience h1 {
     font-family: 'GreyQo';
     text-shadow: 1px 1px rgb(212, 212, 212);
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .Section {
-    height: 120px;
+    height: 300px;
     width: 100%;
     margin: 5px;
     display: flex;
@@ -87,26 +87,26 @@
 
 .company {
     font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
+    font-size: 2rem;
     color: rgb(0, 0, 0);
     margin: 3px;
 }
 
 .dates {
     font-family: 'Times New Roman', Times, serif;
-    font-size: x-small ;
+    font-size: 1rem;
     color: rgb(99, 99, 99);
 }
 
 .role {
     font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
+    font-size: 1.5rem;
     color: rgb(0, 0, 0);
     margin: 3px;
 }
 
 .description {
     font-family: 'Times New Roman', Times, serif;
-    font-size: xx-small;
+    font-size: 1rem;
     color: rgb(117, 117, 117);
 }
