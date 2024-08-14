@@ -1,0 +1,44 @@
+.FileUpload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 10px;
+    height: 250px;
+    width: 400px;
+}
+
+.FileInput {
+    width: 300px;
+    height: 10%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    border: 2px solid rgb(201, 201, 201);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.Upload {
+    width: 200px;
+    height: 20%;
+    margin: 10px;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    
+}
+
+.Upload:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.Status {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}

@@ -5,6 +5,7 @@ import AIChatbot from './pages/AIChatbot';
 import RealEstateAPIPage from './pages/RealEstateAPIPage';
 import HUDPage from './pages/HUDPage';
 import MapAPIPage from './pages/MapAPIPage';
+import TestProjects from './pages/TestProjects';
 // Import other pagess as needed
 
 const routes = [
@@ -15,6 +16,7 @@ const routes = [
   { path: '/realestateapi', element: <RealEstateAPIPage />},
   { path: '/mapapi', element: <MapAPIPage />},
   { path: '/hud', element: <HUDPage />},
+  { path: '/testprojects', element: <TestProjects/>}
   // Add more routes here as needed
 ];
 

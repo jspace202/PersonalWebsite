@@ -24,6 +24,11 @@ const Gallery = () => {
             text='This is a MAP API'
             route='/mapapi'
       />
+      <Item image='mapapi.png' 
+            title='Test Projects' 
+            text='This page is for testing projects'
+            route='/testprojects'
+      />
     </div>
   );
 };
