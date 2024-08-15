@@ -6,36 +6,6 @@ const path = require('path');
 const fs = require('fs');
 
 dotenv.config();
-/*
-const uploadsPath = path.join(__dirname, '/backend/uploads');
-
-app.get('/api/file-count', (req, res) => {
-  fs.readdir(uploadsPath, (err, files) => {
-    if (err) {
-      return res.status(500).json({ error: 'Unable to read directory' });
-    }
-
-    // Count files only, excluding directories
-    const fileCount = files.filter(file => fs.statSync(path.join(uploadsPath, file)).isFile()).length;
-
-    res.json({ count: fileCount });
-  });
-});
-
-const folderPath = 'backend/uploads/';
-
-fs.readdir(folderPath, (err, files) => {
-  if (err) {
-    console.error('Error reading directory:', err);
-    return;
-  }
-  
-  // Count files only, excluding directories
-  const fileCount = files.filter(file => fs.statSync(path.join(folderPath, file)).isFile()).length;
-  
-  console.log('Number of files in uploads/:', fileCount);
-});
-*/
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -55,9 +25,21 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 
-
-
 //Routes
+app.get('/api/filecount', (req, res) => {
+  const uploadsPath = path.join(__dirname, 'uploads/');
+
+  fs.readdir(uploadsPath, (err, files) => {
+    if (err) {
+      return res.status(500).json({ error: 'Unable to read directory' });
+    }
+
+    // Count files only, excluding directories
+    const fileCount = files.filter(file => fs.statSync(path.join(uploadsPath, file)).isFile()).length;
+    res.json({ count: fileCount });
+  });
+});
+
 app.get('/', (req, res) => {
   res.send('Hello World');
 });

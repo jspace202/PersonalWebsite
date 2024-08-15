@@ -10,6 +10,7 @@ const MapAPIPage = () => {
       <Navbar />
       <MapAPI />
       <Footer />
+      
     </div>
   );
 };

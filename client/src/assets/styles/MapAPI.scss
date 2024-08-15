@@ -1,6 +1,7 @@
 .MapAPIPage {
     display: flex;
     flex-direction: column;
+    height: 1200px;
 }
 
 .MapAPIBanner {
@@ -21,12 +22,13 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.06; /* Adjust opacity as needed */
-    z-index: 1; /* Layer it below the content */
+    opacity: 0.06; 
+    //z-index: 1;
 }
 
 .MapAPI {
-    height: 860px;
+    height: 1000px;
     width: 100%;
     background-color: rgb(255, 255, 255);
+    z-index: -1;
 }
