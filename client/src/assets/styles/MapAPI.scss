@@ -1,17 +1,16 @@
 .MapAPIPage {
     display: flex;
     flex-direction: column;
-    height: 1200px;
 }
-
-.MapAPIBanner {
+/*
+.MapAPIBanners {
     margin-top: 50px;
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.MapAPIBanner::before {
+.MapAPIBanners::before {
     content: "";
     position: absolute;
     top: 0;
@@ -24,11 +23,12 @@
     background-repeat: no-repeat;
     opacity: 0.06; 
     //z-index: 1;
-}
+}*/
 
 .MapAPI {
-    height: 1000px;
+    height: 800px;
     width: 100%;
+    margin-top: 50px;
     background-color: rgb(255, 255, 255);
     z-index: -1;
 }
