@@ -26,7 +26,7 @@ const Gallery = () => {
       />
       <Item image='mapapi.png' 
             title='MAP API' 
-            text='This is a MAP API'
+            text='This is an embedded map built with OpenLayers API'
             route='/mapapi'
       />
       <Item image='test.jpg' 
