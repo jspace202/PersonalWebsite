@@ -9,6 +9,11 @@ const Gallery = () => {
             text='This is a Real Estate API'
             route='/realestateapi'
       />
+      <Item image='Spotify.png' 
+            title='Spotify API' 
+            text='This is a Spotify Web Player'
+            route='/spotify'
+      />
       <Item image='neuralnet.png' 
             title='AI Chatbot' 
             text='This is an AI Chatbot'
@@ -24,7 +29,7 @@ const Gallery = () => {
             text='This is a MAP API'
             route='/mapapi'
       />
-      <Item image='mapapi.png' 
+      <Item image='test.jpg' 
             title='Test Projects' 
             text='This page is for testing projects'
             route='/testprojects'

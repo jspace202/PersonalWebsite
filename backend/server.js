@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const axios = require('axios');
 
 dotenv.config();
 
@@ -44,10 +45,11 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
+
 app.post('/api/upload', upload.single('file'), (req, res) => {
   res.json(req.file);
 });
 
-
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
