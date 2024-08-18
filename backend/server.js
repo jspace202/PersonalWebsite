@@ -102,7 +102,7 @@ app.get('/auth', async (req, res) => {
 
 app.get('/artist', async (req, res) => {
   const access_token = await getSpotifyAccessToken(auth_token);
-  const artistID = "0jPHHnU8GUWEF7rwPE9osY";
+  const { artistID } = req.query
   const api_url = `https://api.spotify.com/v1/artists/${artistID}`;
   try{
     const response = await axios.get(api_url, {
