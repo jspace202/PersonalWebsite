@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
-import 'ol/ol.css';
 import MousePosition from 'ol/control/MousePosition';
 import { createStringXY } from 'ol/coordinate';
 import { defaults as defaultControls } from 'ol/control';
