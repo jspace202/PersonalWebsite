@@ -33,12 +33,12 @@
     align-items: center;
     height: 500px;
     z-index: 2;
+    margin-top: 50px;
 }
 
 .AboutHUDIcon {
     width: 70px;
     height: auto;
-    margin: 10px;
 }
 
 .title {
@@ -46,6 +46,13 @@
     font-size: 5rem;
     font-weight: normal;
     text-shadow: 1px 1px rgb(212, 212, 212);
-    margin-top: 40px;
+    z-index: 3;
+}
+
+.portrait {
+    height: 30%;
+    width: auto;
+    border-radius: 100px;
+    opacity: 1;
     z-index: 3;
 }
