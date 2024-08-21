@@ -1,31 +1,46 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// src/components/Spotify.js
+import React, { useState } from 'react';
+import useArtistInfo from '../../hooks/useSpotifyAPI';
 import '../../assets/styles/Spotify.scss';
+import Button from '../UI/Button';
+import InputField from '../UI/InputField';
 
 const Spotify = () => {
-  const [data, setData] = useState(0);
-  //const artistID = "718COspgdWOnwOFpJHRZHS"; // Example artist ID
-  const artistID = "77SW9BnxLY8rJ0RciFqkHh";
+  //const artistID = "77SW9BnxLY8rJ0RciFqkHh";
+  const [artistID, setArtistID] = useState('');
+  const [submittedID, setSubmittedID] = useState(null);
+  const { data } = useArtistInfo(submittedID);
 
-  const handleClick = useEffect(() => {
-    console.log('sdfa')
-    axios.get(`/artist?artistID=${artistID}`)
-      .then(response => setData(response.data))
-      .catch(error => console.error('Error fetching data:', error));
-  },[]);
+  const handleInputChange = (e) => {
+    setArtistID(e.target.value);
+  };
+
+  const handleSubmit = () => {
+    setSubmittedID(artistID);
+  };
 
   return (
     <div className='Spotify'>
       <div className='Embedded'>
-        <text>embedded stuff</text>
+        <p>Embedded stuff</p>
       </div>
       <div className='Data'>
-        <button className={handleClick}>get artist info</button>
-        <text>{data.name}</text>
+        <InputField
+          label="Artist ID"
+          value={artistID}
+          onChange={handleInputChange}
+          placeholder="Enter artist ID"
+        />
+        <Button
+          text={'Submit'}
+          color={'black'}
+          size={'1rem'}
+          onClick={handleSubmit}
+        />
+        {data && <p>{data.name}</p>}
       </div>
     </div>
   );
 };
 
 export default Spotify;
-
