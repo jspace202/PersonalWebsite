@@ -6,6 +6,12 @@ const path = require('path');
 const fs = require('fs');
 const axios = require('axios');
 const qs = require('qs');
+const cors = require('cors');
+
+// Configure CORS
+app.use(cors({
+  origin: 'https://jadenpatel.netlify.app', // Replace with your Netlify domain
+}));
 
 dotenv.config();
 

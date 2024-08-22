@@ -1,15 +1,17 @@
 // src/services/fileService.js
-import axios from 'axios';
+import axiosInstance from "../axiosInstance";
+
+
 
 export function getFileCount () {
-  return axios.get('/api/filecount');
+  return axiosInstance.get('/api/filecount');
 };
 
 export function uploadFile (file) {
   const formData = new FormData();
   formData.append('file', file);
 
-  return axios.post('/api/upload', formData, {
+  return axiosInstance.post('/api/upload', formData, {
     headers: {
       'Content-Type': 'multipart/form-data',
     },
@@ -17,5 +19,5 @@ export function uploadFile (file) {
 };
 
 export function getArtistName (artistID) {
-    return axios.get(`/artist?artistID=${artistID}`);
+    return axiosInstance.get(`/artist?artistID=${artistID}`);
 };
