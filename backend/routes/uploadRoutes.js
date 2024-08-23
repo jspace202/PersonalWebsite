@@ -1,29 +1,47 @@
 const express = require('express');
+const fs = require('fs');
 const multer = require('multer');
 const path = require('path');
-
 const router = express.Router();
 
-// Set up multer storage
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/'); // Specify the destination directory
-  },
-  filename: function (req, file, cb) {
-    cb(null, `${Date.now()}-${file.originalname}`); // Create a unique filename
-  }
+    destination: function (req, file, cb) {
+      cb(null, 'backend/uploads/');
+    },
+    filename: function (req, file, cb) {
+      // Get the original file extension
+      const ext = path.extname(file.originalname);
+  
+      // Create a filename with original name, current date, and time
+      const uniqueName = `${path.basename(file.originalname, ext)}_${Date.now()}${ext}`;
+  
+      cb(null, uniqueName);
+    },
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({ storage });
 
-// Upload route
+router.get('/', (req, res) => {
+    res.send('Hello Worldss');
+});
+
+router.get('/filecount', (req, res) => {
+    const uploadsPath = path.join(__dirname, '../uploads/');
+
+    fs.readdir(uploadsPath, (err, files) => {
+      if (err) {
+        return res.status(500).json({ error: 'Unable to read directory' });
+      }
+  
+      // Count files only, excluding directories
+      const fileCount = files.filter(file => fs.statSync(path.join(uploadsPath, file)).isFile()).length;
+      res.json({ count: fileCount });
+    });
+});
+
 router.post('/upload', upload.single('file'), (req, res) => {
-  try {
-    res.json({ filePath: `/uploads/${req.file.filename}` });
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Server Error');
-  }
+    res.json(req.file);
 });
 
 module.exports = router;
+

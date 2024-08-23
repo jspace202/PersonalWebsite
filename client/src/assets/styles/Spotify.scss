@@ -25,11 +25,13 @@
 }
 
 .Data {
+    display: flex;
+    flex-direction: column;
     width: 30%;
     height: 90%;
     padding: 1%;
     border-radius: 6px;
     border: 1px solid rgb(185, 185, 185);
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
