@@ -1,9 +1,9 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const pool = require('./config/db');
 const uploadRoutes = require('./routes/uploadRoutes');
 const spotifyRoutes = require('./routes/spotifyRoutes');
+const realestateRoutes = require('./routes/realestateRoutes');
 const app = express();
 
 // Configure CORS
@@ -15,17 +15,8 @@ dotenv.config();
 
 app.use(express.json());
 
-app.get('/api/data', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT * FROM realestate');
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Server Error');
-  }
-});
-
 //Routes
+app.use('/api/realestatedata', realestateRoutes);
 app.use('/api/uploads', uploadRoutes);
 app.use('/api/spotify', spotifyRoutes);
 

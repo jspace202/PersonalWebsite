@@ -21,3 +21,7 @@ export function uploadFile (file) {
 export function getArtistName (artistID) {
     return axios.get(`/api/spotify/artist?artistID=${artistID}`);
 };
+
+export function getRealEstate () {
+    return axios.get('/api/realestatedata');
+};

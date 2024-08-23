@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { getArtistName } from '../services/fileService';
 
 const useArtistInfo = (artistID) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState();
 
   useEffect(() => {
     getArtistName(artistID)
