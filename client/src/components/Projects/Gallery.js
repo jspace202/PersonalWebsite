@@ -20,9 +20,9 @@ const Gallery = () => {
             route='/aichatbot'
       />
       <Item image='digihud.jpg' 
-            title='HUD' 
-            text='This is a HUD'
-            route='/hud'
+            title='Database' 
+            text='Sample Database using PostgreSQL'
+            route='/database'
       />
       <Item image='mapapi.png' 
             title='MAP API' 

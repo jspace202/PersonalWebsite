@@ -1,16 +1,16 @@
 import React from 'react';
 import Navbar from '../components/NavBar/Navbar';
 import Footer from '../components/Footer/Footer';
-import HUD from '../components/Projects/HUD';
+import Database from '../components/Projects/Database';
 
-const HUDPage = () => {
+const DatabasePage = () => {
   return (
-    <div className='HUDPage'>
+    <div className='DatabasePage'>
       <Navbar />
-      <HUD />
+      <Database />
       <Footer />
     </div>
   );
 };
 
-export default HUDPage;
+export default DatabasePage;

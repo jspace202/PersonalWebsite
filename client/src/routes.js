@@ -3,7 +3,7 @@ import Projects from './pages/Projects';
 import NotFound from './pages/NotFound';
 import AIChatbot from './pages/AIChatbot';
 import RealEstateAPIPage from './pages/RealEstateAPIPage';
-import HUDPage from './pages/HUDPage';
+import DatabasePage from './pages/DatabasePage';
 import MapAPIPage from './pages/MapAPIPage';
 import TestProjects from './pages/TestProjects';
 import SpotifyPage from './pages/SpotifyPage';
@@ -16,7 +16,7 @@ const routes = [
   { path: '/aichatbot', element: <AIChatbot />},
   { path: '/realestateapi', element: <RealEstateAPIPage />},
   { path: '/mapapi', element: <MapAPIPage />},
-  { path: '/hud', element: <HUDPage />},
+  { path: '/database', element: <DatabasePage />},
   { path: '/testprojects', element: <TestProjects/>},
   { path: '/spotify', element: <SpotifyPage />},
   // Add more routes here as needed

@@ -22,7 +22,6 @@ const RealEstateAPI = () => {
                 <th>State</th>
                 <th>Zip Code</th>
                 <th>House Size</th>
-                <th>Previous Sold Date</th>
               </tr>
             </thead>
             <tbody>
@@ -39,7 +38,6 @@ const RealEstateAPI = () => {
                   <td>{item.state}</td>
                   <td>{item.zip_code}</td>
                   <td>{item.house_size} sq ft</td>
-                  <td>{item.prev_sold_date}</td>
                 </tr>
               ))}
             </tbody>

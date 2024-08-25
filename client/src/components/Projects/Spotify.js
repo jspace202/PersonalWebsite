@@ -8,7 +8,7 @@ import InputField from '../UI/InputField';
 const Spotify = () => {
   //const artistID = "77SW9BnxLY8rJ0RciFqkHh";
   const [artistID, setArtistID] = useState('');
-  const [submittedID, setSubmittedID] = useState(null);
+  const [submittedID, setSubmittedID] = useState('');
   const { data } = useArtistInfo(submittedID);
 
   const handleInputChange = (e) => {

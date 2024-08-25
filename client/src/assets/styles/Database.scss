@@ -1,0 +1,65 @@
+.DatabasePage {
+    display: flex;
+    flex-direction: column;
+}
+
+.DatabaseBanner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.DatabaseBanner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../../public/digihud.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.06; /* Adjust opacity as needed */
+    z-index: 1; /* Layer it below the content */
+}
+
+.Database {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.DbSection {
+    min-width: 200px;
+    width: 20%;
+    min-height: 675px;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid rgb(107, 107, 107);
+    background-color: rgb(255, 255, 255);
+    opacity: 0.7;
+    padding: 5px;
+    margin: 5px;
+    z-index: 2;
+}
+
+.DbSectionLarge {
+    min-width: 400px;
+    width: 50%;
+    min-height: 675px;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid rgb(107, 107, 107);
+    background-color: rgb(255, 255, 255);
+    opacity: 0.7;
+    padding: 5px;
+    z-index: 2;
+}

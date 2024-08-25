@@ -1,69 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
+import 'ol/ol.css';
 import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
-import MousePosition from 'ol/control/MousePosition';
-import { createStringXY } from 'ol/coordinate';
-import { defaults as defaultControls } from 'ol/control';
+import '../../assets/styles/MapAPI.scss'
 
-function MapAPI() {
-    useEffect(() => {
-        const mousePositionControl = new MousePosition({
-            coordinateFormat: createStringXY(4),
-            projection: 'EPSG:4326',
-        });
+const MapAPI = () => {
 
-        const osmLayer = new TileLayer({
-            source: new OSM(),
-        });
+  useEffect(() => {
+    const map = new Map({
+      target: 'map',
+      layers: [
+        new TileLayer({
+          source: new OSM(),
+        }),
+      ],
+      view: new View({
+        center: [-11000000, 4320000], // Center the map at the coordinates [longitude, latitude]
+        zoom: 5, // Adjust the zoom level
+      }),
+    });
 
-        const map = new Map({
-            controls: defaultControls().extend([mousePositionControl]),
-            layers: [osmLayer],
-            target: 'map',
-            view: new View({
-                center: [-10685943, 4321401],
-                zoom: 9,
-            }),
-        });
+    return () => map.setTarget(null); // Clean up the map on API unmount
+  }, []);
 
-        const projectionSelect = document.getElementById('projection');
-        const precisionInput = document.getElementById('precision');
-
-        if (projectionSelect) {
-            projectionSelect.addEventListener('change', function (event) {
-                mousePositionControl.setProjection(event.target.value);
-            });
-        }
-
-        if (precisionInput) {
-            precisionInput.addEventListener('change', function (event) {
-                const format = createStringXY(event.target.valueAsNumber);
-                mousePositionControl.setCoordinateFormat(format);
-            });
-        }
-
-        return () => {
-            map.setTarget(null);
-            if (projectionSelect) {
-                projectionSelect.removeEventListener('change', () => {});
-            }
-            if (precisionInput) {
-                precisionInput.removeEventListener('change', () => {});
-            }
-        };
-    }, []);
-
-    return (
-        <div className='MapAPIBanner'>
-            <div id="map" className="MapAPI"/>
-            <select id="projection">
-                <option value="EPSG:4326">EPSG:4326</option>
-                <option value="EPSG:3857">EPSG:3857</option>
-            </select>
-            <input id="precision" type="number" defaultValue={4} min={0} />
-        </div>
-    );
-}
+  return (
+    <div id='map' className='MapAPI'></div>
+  );
+};
 
 export default MapAPI;

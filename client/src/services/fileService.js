@@ -25,3 +25,8 @@ export function getArtistName (artistID) {
 export function getRealEstate () {
     return axios.get('/api/realestatedata');
 };
+
+export function getPropertyTable (table) {
+  return axios.get(`/api/properties/${table}`);
+};
+

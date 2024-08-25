@@ -4,6 +4,7 @@ const cors = require('cors');
 const uploadRoutes = require('./routes/uploadRoutes');
 const spotifyRoutes = require('./routes/spotifyRoutes');
 const realestateRoutes = require('./routes/realestateRoutes');
+const propertyRoutes = require('./routes/propertyRoutes');
 const app = express();
 
 // Configure CORS
@@ -16,6 +17,7 @@ dotenv.config();
 app.use(express.json());
 
 //Routes
+app.use('/api/properties', propertyRoutes);
 app.use('/api/realestatedata', realestateRoutes);
 app.use('/api/uploads', uploadRoutes);
 app.use('/api/spotify', spotifyRoutes);
