@@ -33,9 +33,9 @@ const Connections = () => {
 
   return (
     <div className='Connections'>
-      Backend Server:<text className={isConnected ? 'connected' : 'not-connected'}>
+      Backend Server:<span className={isConnected ? 'connected' : 'not-connected'}>
         {isConnected ? 'Connected' : 'Not Connected'}
-      </text>
+      </span>
     </div>
   ); 
 };

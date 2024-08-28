@@ -17,7 +17,7 @@ dotenv.config();
 app.use(express.json());
 
 //Routes
-app.get('/api/backendConnection', (req, res) => {
+app.use('/api/backendConnection', (req, res) => {
   console.log('backend check success');
   res.send('active');
 });
