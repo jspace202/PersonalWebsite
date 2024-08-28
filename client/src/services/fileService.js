@@ -30,3 +30,11 @@ export function getPropertyTable (table) {
   return axios.get(`/api/properties/${table}`);
 };
 
+export function postEntry(data, table) {
+  return axios.post(`/api/properties/${table}`, data, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+}
+

@@ -1,12 +1,11 @@
 // src/hooks/useDatabase.js
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { getPropertyTable } from '../services/fileService';
 
 const useDatabase = (table) => {
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    // Ensure table is used correctly
+  const fetchData = useCallback(() => {
     getPropertyTable(table)
       .then(response => {
         setData(response.data);
@@ -16,7 +15,11 @@ const useDatabase = (table) => {
       });
   }, [table]);
 
-  return { data };
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  return { data, refresh: fetchData };
 };
 
 export default useDatabase;
