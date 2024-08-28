@@ -20,7 +20,7 @@ async function getSpotifyAccessToken(auth_token) {
     const response = await axios.post(token_url, data, {
       headers: { 
         'Authorization': `Basic ${auth_token}`,
-        'Content-Type': 'application/x-www-form-urlencoded' 
+        'Content-Type': 'application/x-www-form-urlencoded'
       }
     });
 
@@ -70,7 +70,8 @@ router.get('/artist', async (req, res) => {
   try{
     const response = await axios.get(api_url, {
       headers: {
-        'Authorization': `Bearer ${access_token}`
+        'Authorization': `Bearer ${access_token}`, // Ensure your accessToken is valid and not expired
+        'Content-Type': 'application/json'
       }
     });
     //console.log(response.data);

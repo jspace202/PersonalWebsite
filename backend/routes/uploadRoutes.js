@@ -40,6 +40,7 @@ router.get('/filecount', (req, res) => {
 });
 
 router.post('/upload', upload.single('file'), (req, res) => {
+    console.log(`File Uploaded`)
     res.json(req.file);
 });
 
