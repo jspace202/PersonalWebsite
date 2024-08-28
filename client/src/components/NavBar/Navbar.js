@@ -1,14 +1,18 @@
 import React from 'react';
-import '../../assets/styles/main.scss'
+import '../../assets/styles/NavBar.scss'
 import NavButton from './NavButton';
 import NavIcon from './NavIcon';
+import Connections from './Connections';
 
 function Navbar () {
   return (
     <div className='Navbar'>
-      <NavIcon />
-      <NavButton text='Home' route="/" />
-      <NavButton text='Projects' route="/projects" />
+      <div className='LeftItems'>
+        <NavIcon />
+        <NavButton text='Home' route="/" />
+        <NavButton text='Projects' route="/projects" />
+      </div>
+      <Connections/>
     </div>
   );
 };

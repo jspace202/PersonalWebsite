@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
   
       // Create a filename with original name, current date, and time
       const uniqueName = `${path.basename(file.originalname, ext)}_${Date.now()}${ext}`;
-  
+      console.log(`Added: ${uniqueName}`)
       cb(null, uniqueName);
     },
 });
@@ -35,12 +35,12 @@ router.get('/filecount', (req, res) => {
   
       // Count files only, excluding directories
       const fileCount = files.filter(file => fs.statSync(path.join(uploadsPath, file)).isFile()).length;
+      console.log(`File count: ${fileCount}`)
       res.json({ count: fileCount });
     });
 });
 
 router.post('/upload', upload.single('file'), (req, res) => {
-    console.log(`File Uploaded`)
     res.json(req.file);
 });
 

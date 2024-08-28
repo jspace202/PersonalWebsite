@@ -74,7 +74,7 @@ router.get('/artist', async (req, res) => {
         'Content-Type': 'application/json'
       }
     });
-    //console.log(response.data);
+    console.log('Artist Data Received');
     res.json(response.data);
   }catch(error){
     console.log(error);

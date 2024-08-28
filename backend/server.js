@@ -17,6 +17,10 @@ dotenv.config();
 app.use(express.json());
 
 //Routes
+app.get('/api/backendConnection', (req, res) => {
+  res.send('active');
+});
+
 app.use('/api/properties', propertyRoutes);
 app.use('/api/realestatedata', realestateRoutes);
 app.use('/api/uploads', uploadRoutes);
@@ -24,4 +28,3 @@ app.use('/api/spotify', spotifyRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
