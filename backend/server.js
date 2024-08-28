@@ -18,6 +18,7 @@ app.use(express.json());
 
 //Routes
 app.get('/api/backendConnection', (req, res) => {
+  console.log('backend check success');
   res.send('active');
 });
 

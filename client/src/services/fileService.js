@@ -3,7 +3,8 @@ import axiosInstance from "../axiosInstance";
 //import axios from "axios";
 
 export function checkBackend() {
-  return axiosInstance.get('/api/checkConnection');
+  console.log('frontend check success');
+  return axiosInstance.get('/api/backendConnection');
 }
 
 export function getFileCount () {
