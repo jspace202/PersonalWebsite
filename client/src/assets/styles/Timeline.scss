@@ -1,0 +1,26 @@
+.Timeline {
+    height: 3500px;
+    margin-top: 52px;
+}
+
+.GeoRow {
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.RowTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    width: 70px;
+    padding: 2px;
+}
+
+.RowData {
+    width: auto;
+    min-width: 100px;
+    padding: 2px;
+}

@@ -7,6 +7,7 @@ import DatabasePage from './pages/DatabasePage';
 import MapAPIPage from './pages/MapAPIPage';
 import TestProjects from './pages/TestProjects';
 import SpotifyPage from './pages/SpotifyPage';
+import TimelinePage from './pages/TimelinePage';
 // Import other pagess as needed
 
 const routes = [
@@ -19,6 +20,7 @@ const routes = [
   { path: '/database', element: <DatabasePage />},
   { path: '/testprojects', element: <TestProjects/>},
   { path: '/spotify', element: <SpotifyPage />},
+  { path: '/timeline', element: <TimelinePage />},
   // Add more routes here as needed
 ];
 

@@ -34,6 +34,11 @@ const Gallery = () => {
             text='This page is for testing projects'
             route='/testprojects'
       />
+      <Item image='test.jpg' 
+            title='Timeline of History' 
+            text='Timeline Styling Project'
+            route='/timeline'
+      />
     </div>
   );
 };
